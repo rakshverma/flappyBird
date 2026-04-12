@@ -1,0 +1,2 @@
+algorithm,train_seconds,timesteps,mean_reward,std_reward,mean_score,episodes_eval,model_path
+a3c,16.02757979099988,100003,1291.0,0.0,91.0,10,/Users/rakshitverma/Documents/flappyBird/results/a3c_only/a3c_model.pt

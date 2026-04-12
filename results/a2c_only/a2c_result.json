@@ -1,0 +1,10 @@
+{
+  "algorithm": "a2c",
+  "train_seconds": 504.46475420799993,
+  "timesteps": 100000,
+  "mean_reward": 12.959999084472656,
+  "std_reward": 6.507257461547852,
+  "mean_score": 0.30000001192092896,
+  "episodes_eval": 10,
+  "model_path": "results/a2c_only/a2c_model.pt"
+}

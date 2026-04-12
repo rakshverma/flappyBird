@@ -1,0 +1,2 @@
+algorithm,train_seconds,timesteps,mean_reward,std_reward,mean_score,episodes_eval,model_path
+a3c,6.758389333001105,20000,591.6900024414062,511.0008544921875,41.099998474121094,10,results/compare_mlp_fs1/a3c_model.pt

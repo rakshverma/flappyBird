@@ -1,0 +1,2 @@
+algorithm,train_seconds,timesteps,mean_reward,std_reward,mean_score,episodes_eval,model_path
+ppo,645.892906042005,100000,909.4500122070312,459.90582275390625,63.70000076293945,10,results/ppo_only/ppo_model.pt

@@ -1,0 +1,10 @@
+{
+  "algorithm": "a3c",
+  "train_seconds": 16.02757979099988,
+  "timesteps": 100003,
+  "mean_reward": 1291.0,
+  "std_reward": 0.0,
+  "mean_score": 91.0,
+  "episodes_eval": 10,
+  "model_path": "/Users/rakshitverma/Documents/flappyBird/results/a3c_only/a3c_model.pt"
+}

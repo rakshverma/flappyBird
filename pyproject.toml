@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flappybird"
+version = "0.1.0"
+description = "Flappy Bird reinforcement learning with A3C, pygame, and uv"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "gymnasium>=0.29.1",
+    "numpy>=1.26.4",
+    "pygame>=2.6.1",
+    "torch>=2.2.2",
+]
+
+[project.scripts]
+flappy-bird = "flappy_rl.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["flappy_rl*"]
+
+[tool.uv]
+package = true

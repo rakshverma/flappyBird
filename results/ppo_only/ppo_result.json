@@ -1,0 +1,10 @@
+{
+  "algorithm": "ppo",
+  "train_seconds": 645.892906042005,
+  "timesteps": 100000,
+  "mean_reward": 909.4500122070312,
+  "std_reward": 459.90582275390625,
+  "mean_score": 63.70000076293945,
+  "episodes_eval": 10,
+  "model_path": "results/ppo_only/ppo_model.pt"
+}
