@@ -27,15 +27,7 @@ uv run flappy-bird train-ppo --timesteps 100000 --seed 42
 Train only A2C:
 
 ```bash
-uv run flappy-bird train-a2c --timesteps 100000 --seed 42
-```
-
-## Adaptive A3C
-
-MLP adaptive run:
-
-```bash
-uv run flappy-bird train-a3c-adaptive --chunk-steps 1000 --threshold-score 30 --score-cap 22 --stop-on-threshold
+uv run flappy-bird train-a2c --timesteps 800000 --seed 42 --n-steps 64 --gae-lambda 0.95 --entropy-coef 0.02 --entropy-coef-end 0.001
 ```
 
 ## Play
@@ -61,17 +53,18 @@ uv run flappy-bird play-trained
 ## Outputs
 
 - `results/summary.csv`
-- `results/a3c_result.json`
-- `results/a3c_model.pt`
-- `results/a3c_mlp_adaptive_result.json`
-- `results/a3c_mlp_adaptive_model.pt`
-- `results/ppo_result.json`
-- `results/ppo_model.pt`
-- `results/a2c_result.json`
-- `results/a2c_model.pt`
+- `results/a3c_only/a3c_result.json`
+- `results/a3c_only/a3c_model.pt`
+- `results/a3c_only/summary.csv`
+- `results/ppo_only/ppo_result.json`
+- `results/ppo_only/ppo_model.pt`
+- `results/ppo_only/summary.csv`
+- `results/a2c_only/a2c_result.json`
+- `results/a2c_only/a2c_model.pt`
+- `results/a2c_only/summary.csv`
 
 ## Note
 
 A3C, A2C, and PPO training and environment dynamics are fully Python-based.
 
-uv run flappy-bird play-trained --seed 42 --model-path results/a3c_model.pt
+uv run flappy-bird play-trained --seed 42 --model-path results/a3c_only/a3c_model.pt

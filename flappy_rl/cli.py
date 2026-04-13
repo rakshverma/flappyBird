@@ -81,8 +81,11 @@ def main() -> None:
     train_a2c.add_argument("--timesteps", type=int, default=100_000)
     train_a2c.add_argument("--seed", type=int, default=42)
     train_a2c.add_argument("--results-dir", type=str, default="results")
-    train_a2c.add_argument("--n-steps", type=int, default=16)
+    train_a2c.add_argument("--n-steps", type=int, default=64)
+    train_a2c.add_argument("--gae-lambda", type=float, default=0.95)
     train_a2c.add_argument("--lr", type=float, default=3e-4)
+    train_a2c.add_argument("--entropy-coef", type=float, default=0.02)
+    train_a2c.add_argument("--entropy-coef-end", type=float, default=0.001)
 
     train_ppo = sub.add_parser(
         "train-ppo",
@@ -137,8 +140,11 @@ def main() -> None:
             timesteps=args.timesteps,
             seed=args.seed,
             results_dir=args.results_dir,
+            gae_lambda=args.gae_lambda,
             n_steps=args.n_steps,
             lr=args.lr,
+            entropy_coef=args.entropy_coef,
+            entropy_coef_end=args.entropy_coef_end,
         )
         for result in results:
             print(

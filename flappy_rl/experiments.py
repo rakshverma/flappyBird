@@ -58,15 +58,21 @@ def run_a2c_experiment(
     timesteps: int = 100_000,
     seed: int = 42,
     results_dir: str | Path = "results",
-    n_steps: int = 16,
+    gae_lambda: float = 0.95,
+    n_steps: int = 64,
     lr: float = 3e-4,
+    entropy_coef: float = 0.02,
+    entropy_coef_end: float = 0.001,
 ) -> list[ExperimentResult]:
     result = train_a2c(
         timesteps=timesteps,
         seed=seed,
         results_dir=results_dir,
+        gae_lambda=gae_lambda,
         n_steps=n_steps,
         lr=lr,
+        entropy_coef=entropy_coef,
+        entropy_coef_end=entropy_coef_end,
     )
     append_summary(result, results_dir=results_dir)
     return [result]
