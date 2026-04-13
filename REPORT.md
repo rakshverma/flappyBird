@@ -10,11 +10,12 @@ This report summarizes the final algorithm runs and student-pair assignments.
 
 ## Final Results
 
-| Pair | Algorithm | Train Time (s) | Timesteps | Mean Reward | Std Reward | Mean Score | Eval Episodes | Model Path |
-|---|---|---:|---:|---:|---:|---:|---:|---|
-| A-B | PPO | 645.893 | 100000 | 909.450 | 459.906 | 63.700 | 10 | results/ppo_only/ppo_model.pt |
-| C-D | A2C | 498.605 | 100000 | 12.960 | 6.507 | 0.300 | 10 | results/a2c_only/a2c_model.pt |
-| E-F | A3C | 16.028 | 100003 | 1291.000 | 0.000 | 91.000 | 10 | /Users/rakshitverma/Documents/flappyBird/results/a3c_only/a3c_model.pt |
+| Algorithm | Train Time (s) | Timesteps | Mean Reward | Std Reward | Mean Score | Eval Episodes | Model Path                                                             |
+| --------- | -------------: | --------: | ----------: | ---------: | ---------: | ------------: | ---------------------------------------------------------------------- |
+| PPO       |        645.893 |    100000 |     909.450 |    459.906 |     63.700 |            10 | results/ppo_only/ppo_model.pt                                          |
+| A2C       |        498.605 |    100000 |      12.960 |      6.507 |      0.300 |            10 | results/a2c_only/a2c_model.pt                                          |
+| A3C       |         16.028 |    100003 |    1291.000 |      0.000 |     91.000 |            10 | /Users/rakshitverma/Documents/flappyBird/results/a3c_only/a3c_model.pt |
+
 
 ## Result Sources
 - [A3C JSON](results/a3c_only/a3c_result.json)
